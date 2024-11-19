@@ -2090,7 +2090,7 @@ extern LIBMDBX_API const char *const mdbx_sourcery_anchor;
 #error MDBX_ENABLE_MINCORE must be defined as 0 or 1
 #endif /* MDBX_ENABLE_MINCORE */
 
-/** Enables chunking long list of retired pages during huge transactions commit
+/** Enables chunking long list of retired pages during huge transactions commits
  * to avoid use sequences of pages. */
 #ifndef MDBX_ENABLE_BIGFOOT
 #if MDBX_WORDBITS >= 64 || defined(DOXYGEN)
@@ -2103,7 +2103,7 @@ extern LIBMDBX_API const char *const mdbx_sourcery_anchor;
 #endif /* MDBX_ENABLE_BIGFOOT */
 
 /** Disable some checks to reduce an overhead and detection probability of
- * database corruption to a values closer to the LMDB. */
+ * database corruption to a values closer to LMDB. */
 #ifndef MDBX_DISABLE_VALIDATION
 #define MDBX_DISABLE_VALIDATION 0
 #elif !(MDBX_DISABLE_VALIDATION == 0 || MDBX_DISABLE_VALIDATION == 1)
@@ -2142,7 +2142,7 @@ extern LIBMDBX_API const char *const mdbx_sourcery_anchor;
 #endif /* MDBX_AVOID_MSYNC */
 
 /** Controls sort order of internal page number lists.
- * This mostly experimental/advanced option with not for regular MDBX users.
+ * This mostly an experimental/advanced option with not for regular MDBX users.
  * \warning The database format depend on this option and libmdbx built with
  * different option value are incompatible. */
 #ifndef MDBX_PNL_ASCENDING
